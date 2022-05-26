@@ -1,7 +1,22 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logout } from "../redux/actions/userActions";
+import alertify from "alertifyjs";
 
 export default function Navi() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const userState = useSelector((userState) => userState.userReducer);
+
+  const Logout = () => {
+    navigate("/");
+    dispatch(logout()).then(
+      alertify.error("You have successfully logged out.")
+    );
+  };
+
   return (
     <div>
       <header className="p-3 bg-dark text-white">
@@ -14,42 +29,78 @@ export default function Navi() {
                 </NavLink>
               </li>
               <li>
-                <NavLink to={"/"} className="nav-link px-2 text-white">
+                <NavLink to={"/products"} className="nav-link px-2 text-white">
                   Products
                 </NavLink>
               </li>
-              <li>
-                <NavLink to={"/"} className="nav-link px-2 text-white">
-                  Products
+
+              {userState?.state?.role === "ROLE_SUPPLIER" ? (
+                <li>
+                  <NavLink
+                    to={"/my-products"}
+                    className="nav-link px-2 text-white"
+                  >
+                    My Products
+                  </NavLink>
+                </li>
+              ) : null}
+              {userState?.state?.role === "ROLE_SUPPLIER" ? (
+                <li>
+                  <NavLink
+                    to={"/product-save"}
+                    className="nav-link px-2 text-white"
+                  >
+                    Add Product
+                  </NavLink>
+                </li>
+              ) : null}
+
+              {userState?.state?.role === "ROLE_CUSTOMER" ? (
+                <li>
+                  <NavLink to={"/cart"} className="nav-link px-2 text-white">
+                    Cart
+                  </NavLink>
+                </li>
+              ) : null}
+
+              {userState?.state?.role === "ROLE_ADMIN" ? (
+                <NavLink
+                  to={"/category-save"}
+                  className="nav-link px-2 text-white"
+                >
+                  Add Category
                 </NavLink>
-              </li>
-              <li>
-                <NavLink to={"/"} className="nav-link px-2 text-white">
-                  Products
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={"/"} className="nav-link px-2 text-white">
-                  Products
-                </NavLink>
-              </li>
+              ) : null}
             </ul>
 
             <div className="text-end">
-              <a
-                className="btn btn-outline-light me-2 btn-md"
-                href="/login"
-                role="button"
-              >
-                Login
-              </a>
-              <a
-                className="btn btn-warning btn-md"
-                href="/register"
-                role="button"
-              >
-                Register
-              </a>
+              {userState === null || userState?.state === null ? (
+                <a
+                  className="btn btn-outline-light me-2 btn-md"
+                  href="/login"
+                  role="button"
+                >
+                  Login
+                </a>
+              ) : null}
+              {userState === null || userState?.state === null ? (
+                <a
+                  className="btn btn-warning btn-md"
+                  href="/register/customer"
+                  role="button"
+                >
+                  Register
+                </a>
+              ) : null}
+              {userState !== null && userState?.state !== null ? (
+                <div
+                  className="btn btn-warning btn-md"
+                  onClick={() => Logout()}
+                  role="button"
+                >
+                  Logout
+                </div>
+              ) : null}
             </div>
           </div>
         </div>

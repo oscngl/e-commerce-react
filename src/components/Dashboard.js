@@ -1,4 +1,5 @@
 import React from "react";
+import Filter from "../pages/Filter";
 import ProductList from "../pages/product/ProductList";
 
 export default function Dashboard() {
@@ -6,7 +7,7 @@ export default function Dashboard() {
     <div className="container">
       <div className="row">
         <div className="col-3">
-          filter
+          <Filter />
         </div>
         <div className="col-9">
           <ProductList />
