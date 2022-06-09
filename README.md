@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# E-Commerce Web Application with Java and React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hi everyone!  
+This is a Full-Stack web application that you can login or create a new account and sign in with it.  
+You can register as a Customer, Supplier and Admin.  
+Users can select products and filter them.  
+Customers can add products to their carts.  
+Suppliers can add new products, update them, disable them and add photos to them.  
+Admins can disable inappropriate products and add new category.
 
-## Available Scripts
+## Demo Link
 
-In the project directory, you can run:
+You can check the site
+<a href="https://e-commerce-osc.netlify.app/" rel="nofollow" target="_blank">here</a>.  
+You can log in to the site as a Customer with  
+E-Mail: <b> oscngl.customer<span>@gmail.com </b>   
+Password: <b> 12345678 </b>     
+You can also check back-end repository 
+<a href="https://github.com/oscngl/e-commerce" rel="nofollow" target="_blank">here</a>.  
 
-### `npm start`
+## Topics
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<ul>
+  <li> React (with Redux) </li>
+  <li> Bootstrap </li>
+  <li> Axios </li>
+  <li> HTML </li>
+  <li> CSS </li>
+  <li> JavaScript </li>
+  <br>
+  <li> Java </li>
+  <li> Spring Framework  </li>
+  <li> MVC </li>
+  <li> SOLID Principles </li>
+  <li> JUnit (Unit Test) </li>
+  <li> Mockito (Integration Test) </li>
+  <li> JWT (Authorization & Authentication) </li>
+  <li> Java Mail Sender (E-Mail Confirmation) </li>
+  <li> Cloudinary (A cloud service used for storing photos) </li>
+  <li> REST API </li>
+  <li> PostgreSQL </li>
+  <br>
+  <li> Deployed the REST API on Heroku </li>
+  <li> Deployed the React App on Netlify </li>
+</ul>
+  
+## Author
+  
+Ömer Said ÇENGEL (oscngl)  <br>
